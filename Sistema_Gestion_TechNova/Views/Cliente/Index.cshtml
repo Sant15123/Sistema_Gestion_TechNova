@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Sistema_Gestion_TechNova.Models.Cliente>
+
+<h2>Clientes</h2>
+
+<form method="get" class="mb-3">
+    <input type="text" name="search" value="@ViewBag.Search" placeholder="Buscar..." class="form-control" />
+</form>
+
+<a href="/Cliente/Create" class="btn btn-primary mb-3">Nuevo Cliente</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.NombreCompleto</td>
+                <td>@c.Correo</td>
+                <td>@c.Direccion</td>
+                <td>@c.Telefono</td>
+                <td>
+                    <a href="/Cliente/Details/@c.Id" class="btn btn-info btn-sm">Detalles</a>
+                    <a href="/Cliente/Edit/@c.Id" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="/Cliente/Delete/@c.Id" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

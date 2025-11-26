@@ -1,0 +1,29 @@
+﻿@model Sistema_Gestion_TechNova.Models.Cliente
+
+<h2>Editar Cliente</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label>Nombre Completo</label>
+        <input asp-for="NombreCompleto" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Correo</label>
+        <input asp-for="Correo" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Dirección</label>
+        <input asp-for="Direccion" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Teléfono</label>
+        <input asp-for="Telefono" class="form-control" />
+    </div>
+
+    <button class="btn btn-primary">Actualizar</button>
+</form>

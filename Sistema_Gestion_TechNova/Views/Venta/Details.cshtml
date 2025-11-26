@@ -1,0 +1,32 @@
+﻿@model Sistema_Gestion_TechNova.Models.Venta
+
+<h2>Detalle de Venta</h2>
+
+<p><strong>Cliente:</strong> @Model.ClienteNombre</p>
+<p><strong>Fecha:</strong> @Model.Fecha.ToString("yyyy-MM-dd HH:mm")</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Cant</th>
+            <th>Precio</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.ProductoNombre</td>
+                <td>@item.Cantidad</td>
+                <td>$@item.PrecioUnitario</td>
+                <td>$@item.Subtotal</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Total: $@Model.Total</h3>
+
+<a href="/Venta" class="btn btn-secondary mt-3">Volver</a>

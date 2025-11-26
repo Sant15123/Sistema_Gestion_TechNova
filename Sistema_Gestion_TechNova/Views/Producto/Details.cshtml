@@ -1,0 +1,13 @@
+﻿@model Sistema_Gestion_TechNova.Models.Producto
+
+<h2>Detalles del Producto</h2>
+
+<ul class="list-group">
+    <li class="list-group-item"><strong>Código:</strong> @Model.Codigo</li>
+    <li class="list-group-item"><strong>Nombre:</strong> @Model.Nombre</li>
+    <li class="list-group-item"><strong>Descripción:</strong> @Model.Descripcion</li>
+    <li class="list-group-item"><strong>Precio:</strong> $@Model.PrecioUnitario</li>
+    <li class="list-group-item"><strong>Stock:</strong> @Model.StockDisponible</li>
+</ul>
+
+<a href="/Producto" class="btn btn-secondary mt-3">Volver</a>
